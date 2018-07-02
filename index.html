@@ -25,6 +25,12 @@
 					$('#pgLogin').find('.formLogin').slideUp();
 					$('#pgLogin').find('.formNovaSenha').delay(400).slideDown();
 				});
+
+				$('.inputPass').focus(function() {
+					$('#pgLogin .areaLogin .bxLogin').addClass('passOn');
+				}).focusout(function() {
+					$('#pgLogin .areaLogin .bxLogin').removeClass('passOn');
+				});
 			});
 		}
 
@@ -47,6 +53,22 @@
 
 					$('.tabs').find('.tab').slideUp();
 					$('.tabs').find('#' + el.data('tab')).delay(400).slideDown();
+				});
+			});
+		}
+
+		function functionsDashboard(){
+			$(document).ready(function(){
+				$('.esconderMenu').click(function(){
+					$('#pgDashboard').addClass('navSmaller');
+				});
+
+				$('.abrirMenu').click(function(){
+					$('#pgDashboard').removeClass('navSmaller');
+				});
+
+				$('.sacar').click(function(){
+					$('.mensagemSaque').fadeIn(400).delay(3600).fadeOut(600);
 				});
 			});
 		}

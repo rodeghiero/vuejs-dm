@@ -13,7 +13,7 @@
                                 <input type="text" name="nome" placeholder="seu email">
                             </span>
                             <span class="senha">
-                                <input type="password" name="senha" placeholder="sua senha">
+                                <input class="inputPass" type="password" name="senha" placeholder="sua senha">
                             </span>
                         </div>
                         <!-- <input class="bt send" type="submit" value="entrar"> -->

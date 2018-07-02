@@ -22,42 +22,42 @@
             <div class="navigation">
                 <ul>
                     <li>
-                        <a href="javascript:;" title="Dashboard"><i class="icon iDash"><!-- --></i> Dashboard</a>
+                        <a href="javascript:;" title="Dashboard"><i class="icon iDash"><!-- --></i> <span>Dashboard</span></a>
                     </li>
 
                     <li class="indicators">
                         <p>Usuários</p>
                     </li>
                     <li>
-                        <a href="javascript:;" title="Doners"><i class="icon iDoners"><!-- --></i> Doners</a>
+                        <a href="javascript:;" title="Doners"><i class="icon iDoners"><!-- --></i> <span>Doners</span></a>
                     </li>
                     <li>
-                        <a href="javascript:;" title="Clientes"><i class="icon iClientes"><!-- --></i> Clientes</a>
+                        <a href="javascript:;" title="Clientes"><i class="icon iClientes"><!-- --></i> <span>Clientes</span></a>
                     </li>
                     <li>
-                        <a href="javascript:;" title="Diaristas"><i class="icon iDiaristas"><!-- --></i> Diaristas</a>
+                        <a href="javascript:;" title="Diaristas"><i class="icon iDiaristas"><!-- --></i> <span>Diaristas</span></a>
                     </li>
 
                     <li class="indicators">
                         <p>Controle</p>
                     </li>
                     <li>
-                        <a href="javascript:;" title="Pedidos"><i class="icon iPedidos"><!-- --></i> Pedidos</a>
+                        <a href="javascript:;" title="Pedidos"><i class="icon iPedidos"><!-- --></i> <span>Pedidos</span></a>
                     </li>
                     <li>
-                        <a href="javascript:;" title="Assinaturas"><i class="icon iAssinaturas"><!-- --></i> Assinaturas</a>
+                        <a href="javascript:;" title="Assinaturas"><i class="icon iAssinaturas"><!-- --></i> <span>Assinaturas</span></a>
                     </li>
                     <li>
-                        <a href="javascript:;" title="Cidades"><i class="icon iCidades"><!-- --></i> Cidades</a>
+                        <a href="javascript:;" title="Cidades"><i class="icon iCidades"><!-- --></i> <span>Cidades</span></a>
                     </li>
                     <li>
-                        <a href="javascript:;" title="Nota das Parceiras"><i class="icon iParceiras"><!-- --></i> Nota das Parceiras</a>
+                        <a href="javascript:;" title="Nota das Parceiras"><i class="icon iParceiras"><!-- --></i> <span>Nota das Parceiras</span></a>
                     </li>
                     <li>
-                        <a href="javascript:;" title="Carteira da Empresa"><i class="icon iCarteira"><!-- --></i> Carteira da Empresa</a>
+                        <a href="javascript:;" title="Carteira da Empresa"><i class="icon iCarteira"><!-- --></i> <span>Carteira da Empresa</span></a>
                     </li>
                     <li>
-                        <a href="javascript:;" title="Transferências"><i class="icon iTransferencias"><!-- --></i> Transferências</a>
+                        <a href="javascript:;" title="Transferências"><i class="icon iTransferencias"><!-- --></i> <span>Transferências</span></a>
                     </li>
                 </ul>
             </div>
@@ -65,6 +65,7 @@
             <div class="navFooter">
                 <p>2018 - Donamaid</p>
                 <a href="javascript:;" class="esconderMenu">Esconder Menu</a>
+                <a href="javascript:;" class="abrirMenu">Abrir Menu</a>
             </div>
         </div>
 
@@ -219,59 +220,168 @@
                         <li><a href="javascript:;" data-tab="avaliacoes" title="Avaliações">Avaliações</a></li>
                         <li><a href="javascript:;" data-tab="carteira" title="Carteira">Carteira</a></li>
                     </ul>
+
                     <div id="agenda" class="tab active">
                         Agenda
                         <div>plugin jquery AGENDA</div>
+                    </div>
 
-                        <!-- Tela Pedidos -->
+                    <div id="pedidos" class="tab">
                         <div class="busca">
-                            Busca
+                            <form>
+                                <ul class="lstForm">
+                                    <li>
+                                        <input class="btnBusca" type="submit">
+                                    </li>
+                                    <li>
+                                        <input type="text" name="buscar" placeholder="buscar">
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="buscaAvancada">busca avançada</a>
+                                    </li>
+                                </ul>
+                            </form>
                         </div>
-                        <table>
-                            <thead>
-                                <th>
-                                    <td>Pedido</td>
-                                    <td>Cliente</td>
-                                    <td>Duração</td>
-                                    <td>Data</td>
-                                    <td>Valor</td>
-                                    <td>Total</td>
-                                    <td>Status Diarista</td>
-                                    <td>Valor</td>
-                                    <td></td>
-                                </th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>201801</td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="bxTable">
+                            <table class="tblTp1" cellpadding="0" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Pedido</th>
+                                        <th>Cliente</th>
+                                        <th>Duração</th>
+                                        <th>Data</th>
+                                        <th>Valor</th>
+                                        <th>Total</th>
+                                        <th>Status Diarista</th>
+                                        <th>Valor</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>201801</td>
+                                        <td>Adriana Cardozo</td>
+                                        <td>4.0 horas</td>
+                                        <td>13/03/2018 - 13:00</td>
+                                        <td>R$ 60,00</td>
+                                        <td>R$ 74,90</td>
+                                        <td>Confirmado</td>
+                                        <td>Disponível</td>
+                                        <td>
+                                            <a href="javascript:;" class="btCircle" title="finalizar">finalizar</a>
+                                            <a href="javascript:;" class="btCircle" title="relatar problema">relatar problema</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>201801</td>
+                                        <td>Adriana Cardozo</td>
+                                        <td>4.0 horas</td>
+                                        <td>13/03/2018 - 13:00</td>
+                                        <td>R$ 60,00</td>
+                                        <td>R$ 74,90</td>
+                                        <td>Confirmado</td>
+                                        <td>Disponível</td>
+                                        <td>
+                                            <a href="javascript:;" class="btCircle" title="finalizar">finalizar</a>
+                                            <a href="javascript:;" class="btCircle" title="relatar problema">relatar problema</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>201801</td>
+                                        <td>Adriana Cardozo</td>
+                                        <td>4.0 horas</td>
+                                        <td>13/03/2018 - 13:00</td>
+                                        <td>R$ 60,00</td>
+                                        <td>R$ 74,90</td>
+                                        <td>Confirmado</td>
+                                        <td>Disponível</td>
+                                        <td>
+                                            <a href="javascript:;" class="btCircle" title="finalizar">finalizar</a>
+                                            <a href="javascript:;" class="btCircle" title="relatar problema">relatar problema</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
-                        <!-- Tela Avaliações -->
-                        <div>
-                            <h4>Média Avaliações 4,8</h4>
+                    <div id="avaliacoes" class="clearfix tab">
+                        <div class="head">
+                            <h4>
+                                <span>Média Avaliações 4,8</span>
+                                <div class="stars">
+                                    <span><!-- --></span>
+                                    <span><!-- --></span>
+                                    <span><!-- --></span>
+                                    <span><!-- --></span>
+                                    <span class="m"><!-- --></span>
+                                </div>
+                            </h4>
                         </div>
-                        <ul class="comentarios">
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamm.</li>
+                        <ul class="clearfix comentarios">
+                            <li>
+                                <div class="photo"><img src="../assets/img/user.png"></div>
+                                <div>
+                                    <strong>
+                                        <span>Adriana Cardozo</span>
+                                        <div class="stars">
+                                            <span><!-- --></span>
+                                            <span><!-- --></span>
+                                            <span><!-- --></span>
+                                            <span><!-- --></span>
+                                            <span class="m"><!-- --></span>
+                                        </div>
+                                    </strong>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamm.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="photo"><img src="../assets/img/user.png"></div>
+                                <div>
+                                    <strong>
+                                        <span>Adriana Cardozo</span>
+                                        <div class="stars">
+                                            <span><!-- --></span>
+                                            <span><!-- --></span>
+                                            <span><!-- --></span>
+                                            <span><!-- --></span>
+                                            <span class="m"><!-- --></span>
+                                        </div>
+                                    </strong>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamm.</p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
-                    <div id="pedidos" class="tab">
-                        Pedidos
-                    </div>
-                    <div id="avaliacoes" class="tab">
-                        Avaliações
-                    </div>
+
                     <div id="carteira" class="tab">
-                        Carteira
+                        <div class="status">
+                            <i class="icon"><!-- --></i>
+                            <strong class="valorAtual">R$ <b>935</b>,00</strong>
+                            <p class="title">Saldo disponível</p>
+                            <ul class="clearfix valores">
+                                <li>
+                                    <p>Saldo Futuro</p>
+                                    <strong>R$ 400,50</strong>
+                                </li>
+                                <li>
+                                    <p>Saldo Bloqueado</p>
+                                    <strong>R$ 300,50</strong>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" class="sacar">sacar</a>
+                        </div>
+
+                        <div class="clearfix mensagemSaque">
+                            <p>Transferência realizada com sucesso.</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="navFooter">
-                <a href="javascript:;" title="excluir">excluir</a>
-                <a href="javascript:;" title="desativar">desativar</a>
-                <a href="javascript:;" title="salvar" class="blocked">salvar</a>
+                <a href="javascript:;" class="btCircle" title="excluir">excluir</a>
+                <a href="javascript:;" class="btCircle" title="desativar">desativar</a>
+                <a href="javascript:;" class="btCircle" title="salvar">salvar</a>
             </div>
         </div>
     </div>
@@ -282,6 +392,7 @@
         name: 'Dashboard',
         created() {
             inputPerson();
+            functionsDashboard();
             navigationTabs();
         }
     }
