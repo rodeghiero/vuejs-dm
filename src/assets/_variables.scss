@@ -1,0 +1,32 @@
+
+// --------------------------------------------------
+// Variables
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+// --------------------------------------------------
+//== fonts
+$fontBase: 'Roboto', sans-serif;
+
+
+// --------------------------------------------------
+//== Colors
+$roxo: #603285;
+$rosa: #a11964;
+$cinza_bgr: #ececec;
+
+
+// --------------------------------------------------
+@mixin box-shadow($top, $left, $bottom, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $bottom $blur $color;
+       -moz-box-shadow:inset $top $left $bottom $blur $color;
+    		box-shadow:inset $top $left $bottom $blur $color;
+
+  } @else {
+    -webkit-box-shadow: $top $left $bottom $blur $color;
+       -moz-box-shadow: $top $left $bottom $blur $color;
+    		box-shadow: $top $left $bottom $blur $color;
+  }
+}

@@ -1,0 +1,1084 @@
+@import "./normalize";
+@import "./variables";
+@import "./all";
+@import "./purple";
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #8c8c8c;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #8c8c8c;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #8c8c8c;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #8c8c8c;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+    background: $cinza_bgr;
+    font-family: $fontBase;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+#app {
+    height: 100%;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 990px;
+}
+
+.content {
+    background: #fff;
+}
+
+.icheckbox_square-purple,
+.iradio_square-purple {
+    width: 23px;
+    margin: -2px 3px 0 0;
+}
+
+.bt {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    background: $roxo;
+
+    &:hover {
+        background: #4a1c6f;
+    }
+}
+
+
+
+.HeaderPage {
+    .lstNav {
+        padding: 0;
+        list-style: none;
+        margin: 0 0 20px 0;
+        background: #fcfcfc;
+        border-bottom: 2px solid #ececec;
+
+        li {
+            float: left;
+            padding: 10px;
+
+            a {
+                display: block;
+                padding: 5px 20px;
+            }
+        }
+    }
+}
+
+.footer {
+    padding-top: 20px;
+}
+
+.lstForm {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        float: left;
+        width: 100%;
+        color: #8c8c8c;
+        padding: 0 0 14px 0;
+
+        > span {
+            width: 100%;
+            display: block;
+            padding: 0 10px;
+
+            &.test {
+                min-height: 40px;
+                margin-left: 45px;
+                position: relative;
+
+                .icheckbox_square-purple,
+                .iradio_square-purple {
+                    margin: 8px 0 0 -40px;
+                }
+
+                input[type="text"] {
+                    width: 79%;
+                    position: absolute;
+                }
+            }
+        }
+
+        &.inputAndCheck {
+            padding-left: 40px;
+
+            .icheckbox_square-purple,
+            .iradio_square-purple {
+                float: left;
+                margin: 8px 0 0 -25px;
+            }
+
+            > span {
+                input[type="text"] {
+                    width: 100%;
+                }
+            }
+        }
+
+        &.title {
+            p {
+                color: $roxo;
+                text-transform: uppercase;
+            }
+        }
+
+        input {
+            width: 100%;
+            border: none;
+            color: #8c8c8c;
+            padding: 10px 5px 9px 5px;
+            border-bottom: 1px solid #b1b1b1;
+        }
+        input[type="checkbox"] {
+            width: 18px;
+            float: left;
+            margin-top: 3px;
+            margin-right: 4px;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        p {
+            margin: 0;
+            float: left;
+            width: 100%;
+            display: block;
+            padding: 15px 0 5px 0;
+        }
+
+        &.cols2 {
+            width: 50%;
+            float: left;
+        }
+        &.cols3 {
+            float: left;
+            width: 33.33%;
+            input[type="radio"] {
+                width: 18px;
+                float: left;
+                margin-top: 3px;
+                margin-right: 4px;
+            }
+        }
+
+        &.double {
+            input[type="text"] {
+                width: 90%;
+                float: left;
+            }
+            input[type="radio"] {
+                width: 10%;
+                float: left;
+                margin-top: 13px;
+            }
+        }
+
+        .send {
+            color: #fff;
+            width: 100%;
+            padding: 20px 0;
+            border-radius: 5px;
+        }
+
+        .mensagem {
+            padding: 0;
+            display: block;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}
+
+.tabs {
+    width: 100%;
+    padding: 20px 0;
+
+    .tab {
+        display: none;
+        padding: 20px;
+        border: 2px solid #cecece;
+        /*border-top: none;*/
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .navigationTabs {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            float: left;
+            margin: 0 0 -2px -2px;
+
+            a {
+                color: #333;
+                display: block;
+                font-size: 18px;
+                font-weight: 700;
+                padding: 10px 20px;
+                background: #f2f2f2;
+                border: 2px solid #cecece;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+
+                &.active {
+                    background: #fff;
+                    border-bottom: 2px solid #fff;
+                }
+            }
+
+            &:first-child {
+                margin-left: 0;
+
+                a {
+                    border-left: 2px solid #cecece;
+                }
+            }
+        }
+    }
+}
+
+
+
+#pgHome {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+
+    .contents {
+        margin: 50px 0;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+
+        .bxContent {
+            padding: 0;
+            height: auto;
+            background: #fff;
+            max-width: 624px;
+            min-width: 280px;
+            margin: 10px auto;
+            position: relative;
+            border: 1px solid #ebebeb;
+
+            .content {
+                margin: 50px 0;
+            }
+        }
+    }
+}
+
+
+#pgLogin {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+
+    .areaLogin {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        margin-top: 100px;
+
+        .bxLogin {
+            height: auto;
+            max-width: 624px;
+            min-width: 280px;
+            margin: 10px auto;
+            padding-top: 176px;
+            position: relative;
+            border: 1px solid #ebebeb;
+
+            &:before {
+                left: 50%;
+                top: -1px;
+                position: absolute;
+                margin-left: -130px;
+                content: url('img/dona.png');
+            }
+
+            .marca {
+                display: block;
+                margin: 0 auto;
+                max-width: 360px;
+                text-align: center;
+            }
+
+            p {
+                padding: 5px;
+                color: #8c8c8c;
+                font-size: 14px;
+            }
+
+            .inputs {
+                padding: 25px 0;
+
+                input {
+                    width: 100%;
+                    border: none;
+                    color: #8c8c8c;
+                    padding: 16px 5px 15px 62px;
+                    border-bottom: 1px solid #b1b1b1;
+                }
+
+                .nome,
+                .senha {
+                    display: block;
+                    margin: 30px 0;
+                    position: relative;
+                    &:before {
+                        top: 5px;
+                        left: 11px;
+                        width: 30px;
+                        height: 30px;
+                        position: absolute;
+                    }
+                }
+                .nome {
+                    &:before {
+                        content: "";
+                        background: url('img/icon-user.png') no-repeat center center;
+                        background-size: 74%;
+                    }
+                    &:after {
+                        top: 11px;
+                        right: 3px;
+                        color: #fff;
+                        font-size: 13px;
+                        background: $roxo;
+                        padding: 6px 10px;
+                        position: absolute;
+                        border-radius: 3px;
+                        content: "@donamaid.com";
+                    }
+                    input {
+                        padding-right: 130px;
+                    }
+                }
+
+                .senha {
+                    &:before {
+                        content: "";
+                        background: url('img/icon-pass.png') no-repeat center center;
+                        background-size: 74%;
+                    }
+                }
+            }
+
+            .bt {
+                &.send {
+                    border-radius: 12px;
+                    padding: 8px 30px 9px 30px;
+                }
+                &.newPass {
+                    background: $rosa;
+                    border-radius: 12px;
+                    padding: 8px 30px 9px 30px;
+                }
+            }
+
+            .esqueciSenha {
+                color: $roxo;
+                display: block;
+                margin: 0 auto;
+                font-weight: 300;
+                font-style: normal;
+                margin-top: 15px;
+                font-size: 14px;
+            }
+
+            > div {
+                margin: 10px;
+                background: #fff;
+                padding: 90px 60px 75px 60px;
+                @include box-shadow(10px, 10px, 18px, -5px, rgba(202, 202, 202, 0.75));
+            }
+
+            .formNovaSenha {
+                display: none;
+                padding: 50px 0 0 0;
+
+                p,
+                b {
+                    color: $roxo;
+                    font-size: 17px;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    line-height: 1.4;
+                    padding: 10px 60px 0;
+                }
+
+                .inputs {
+                    padding: 15px 0 10px 0;
+                }
+            }
+        }
+    }
+}
+
+
+#pgCadastro {
+    padding-bottom: 120px;
+
+    .marca {
+        width: 340px;
+        display: block;
+        margin: 160px auto 80px auto;
+
+        .mobile {
+            display: none;
+        }
+    }
+
+    .content {
+        @include box-shadow(10px, 10px, 18px, -5px, rgba(202, 202, 202, 0.75));
+    }
+
+    .perfil {
+        width: 37%;
+        float: left;
+
+        background: -moz-linear-gradient(230deg, rgba(160,25,100,1) 0%, rgba(97,50,133,1) 100%); /* ff3.6+ */
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(97,50,133,1)), color-stop(100%, rgba(160,25,100,1))); /* safari4+,chrome */
+        background: -webkit-linear-gradient(230deg, rgba(160,25,100,1) 0%, rgba(97,50,133,1) 100%); /* safari5.1+,chrome10+ */
+        background: -o-linear-gradient(230deg, rgba(160,25,100,1) 0%, rgba(97,50,133,1) 100%); /* opera 11.10+ */
+        background: -ms-linear-gradient(230deg, rgba(160,25,100,1) 0%, rgba(97,50,133,1) 100%); /* ie10+ */
+        background: linear-gradient(230deg, rgba(160,25,100,1) 0%, rgba(97,50,133,1) 100%); /* w3c */
+
+        > div {
+            padding: 50px 20px 110px 20px;
+
+            strong {
+                color: #fff;
+                display: block;
+                font-size: 24px;
+                font-weight: 500;
+                margin-top: 60px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            p {
+                color: #fff;
+                display: block;
+                text-align: center;
+            }
+
+            .bFacebook,
+            .bGoogle {
+                width: 208px;
+                height: 41px;
+                display: block;
+                margin: 22px auto;
+                text-indent: -9999em;
+            }
+
+            .bFacebook {
+                background: url('img/facebook.png') no-repeat center center;
+            }
+
+            .bGoogle {
+                background: url('img/google.png') no-repeat center center;
+            }
+        }
+
+        .foto {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            margin: 40px auto;
+            border-radius: 50%;
+            border: 5px solid #a24384;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .lstForm {
+        li {
+            &.termos {
+                span {
+                    padding: 15px 10px;
+                }
+            }
+
+            .send {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+
+    .registro {
+        width: 63%;
+        float: right;
+
+        > div {
+            padding: 30px 50px 30px 80px;
+        }
+    }
+}
+
+
+#pgDashboard {
+    position: relative;
+
+    .bxNavigation {
+        top: 0;
+        left: 0;
+        width: 260px;
+        position: absolute;
+        background: #e2e2e2;
+
+        .bxMarca {
+            padding: 14px 20px;
+            background: -moz-linear-gradient(270deg, rgba(160,25,100,1) 0%, rgba(97,50,133,1) 100%); /* ff3.6+ */
+            background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(97,50,133,1)), color-stop(100%, rgba(160,25,100,1))); /* safari4+,chrome */
+            background: -webkit-linear-gradient(270deg, rgba(160,25,100,1) 0%, rgba(97,50,133,1) 100%); /* safari5.1+,chrome10+ */
+            background: -o-linear-gradient(270deg, rgba(160,25,100,1) 0%, rgba(97,50,133,1) 100%); /* opera 11.10+ */
+            background: -ms-linear-gradient(270deg, rgba(160,25,100,1) 0%, rgba(97,50,133,1) 100%); /* ie10+ */
+            background: linear-gradient(270deg, rgba(160,25,100,1) 0%, rgba(97,50,133,1) 100%); /* w3c */
+        }
+
+        .user {
+            padding: 0 0 20px 0;
+            margin: 20px 20px 20px 30px;
+            border-bottom: 1px solid #c4c4c4;
+
+            .photo {
+                float: left;
+                width: 80px;
+                height: 80px;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 4px solid #fff;
+            }
+
+            .infos {
+                float: left;
+                padding: 22px 0 0 20px;
+                p {
+                    margin: 5px 0;
+                    font-size: 13px;
+                }
+                strong {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .navigation {
+            padding-bottom: 100px;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                padding: 10px 20px 10px 30px;
+
+                li {
+                    color: #3f3f3f;
+                    padding: 14px 0;
+                    text-transform: uppercase;
+
+                    &.indicators {
+                        padding: 16px 0 0 0;
+                    }
+
+                    p {
+                        font-size: 11px;
+                        font-weight: 700;
+                    }
+
+                    a {
+                        color: #3f3f3f;
+                        font-size: 15px;
+                    }
+
+                }
+            }
+        }
+
+        .navFooter {
+            position: relative;
+            padding: 0 20px 20px 30px;
+
+            p {
+                color: #333;
+                margin: 14px 0;
+                font-size: 11px;
+                display: inline-block;
+            }
+            .esconderMenu {
+                width: 34px;
+                height: 34px;
+                float: right;
+                display: block;
+                text-indent: -99999em;
+                background: url(img/icon-left.png) no-repeat center center;
+            }
+        }
+    }
+
+    .contents {
+        width: 100%;
+        float: left;
+        padding: 25px 25px 25px 285px;
+
+        .headContent {
+            padding: 0 0 60px 0;
+
+            .iconNavigation {
+                width: 34px;
+                height: 22px;
+                display: inline-block;
+                background: url(img/icon-lines.png) no-repeat center center;
+            }
+
+            .bxSinalizacao {
+                float: right;
+
+                a {
+                    width: 28px;
+                    height: 24px;
+                    margin: 0 2px;
+                    position: relative;
+                    display: inline-block;
+
+                    span {
+                        top: -6px;
+                        right: -6px;
+                        color: #fff;
+                        font-size: 11px;
+                        position: absolute;
+                        border-radius: 3px;
+                        background: #b92d00;
+                        display: inline-block;
+                        padding: 2px 5px 1px 5px;
+                    }
+                }
+
+                .alertas {
+                    width: 26px;
+                    background: url(img/icon-alert-sino.png) no-repeat center center;
+                }
+                .mensagens {
+                    background: url(img/icon-alert-message.png) no-repeat center center;
+                }
+                .usuario {
+                    background: url(img/icon-alert-user.png) no-repeat center center;
+                }
+            }
+        }
+
+        .content {
+            background: #fff;
+            padding: 20px 35px;
+            border: 1px solid #efeeee;
+
+            .dadosPessoais {
+                .foto {
+                    width: 320px;
+                    height: 414px;
+                    overflow: hidden;
+                    border-radius: 4px;
+                    position: absolute;
+                    border: 5px solid #f2f2f2;
+                    background: #fff url(img/enviar-foto.png) no-repeat center center;
+                }
+                .dados {
+                    float: right;
+                    text-align: left;
+                    min-height: 440px;
+                    padding: 0 0 0 360px;
+
+                    .lstForm {
+                        li {
+                            padding: 0;
+                            color: #333;
+                            font-size: 13px;
+
+                            &.title {
+                                font-weight: 700;
+                                p {
+                                    padding: 5px 0;
+                                }
+
+                                &.espTp {
+                                    padding-top: 30px;
+                                }
+                            }
+
+                            input {
+                                margin-bottom: 12px;
+                                padding: 10px 5px 5px 5px;
+                            }
+
+                            > span {
+                                &.esp {
+                                    padding: 0 0 0 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .problemas {
+                h3 {
+                    margin: 0;
+                    color: #333;
+                    text-transform: uppercase;
+                }
+
+                .bloco {
+                    float: left;
+                    max-width: 25%;
+                    padding: 20px 30px 0 0;
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .navFooter {
+            text-align: center;
+            padding: 40px 0 20px 0;
+
+            a {
+                margin: 5px;
+                color: $roxo;
+                padding: 4px 20px;
+                border-radius: 20px;
+                border: 1px solid $roxo;
+
+                &.blocked {
+                    color: #fff;
+                    background: $roxo;
+                }
+            }
+        }
+    }
+}
+
+
+.icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 10px -4px 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &.iDash {
+        background-image: url(img/icon-dashboard.png);
+    }
+    &.iDoners {
+        background-image: url(img/icon-doners.png);
+    }
+    &.iClientes {
+        background-image: url(img/icon-clientes.png);
+    }
+    &.iDiaristas {
+        background-image: url(img/icon-diaristas.png);
+    }
+    &.iPedidos {
+        background-image: url(img/icon-pedidos.png);
+    }
+    &.iAssinaturas {
+        background-image: url(img/icon-assinaturas.png);
+    }
+    &.iCidades {
+        background-image: url(img/icon-cidades.png);
+    }
+    &.iParceiras {
+        background-image: url(img/icon-notas.png);
+    }
+    &.iCarteira {
+        background-image: url(img/icon-carteira.png);
+    }
+    &.iTransferencias {
+        background-image: url(img/icon-transferencia.png);
+    }
+}
+
+
+
+
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 767px) {
+    /* Style adjustments for viewports that meet the condition */
+
+    .lstForm {
+        li {
+            &.cols2 {
+                width: 100%;
+            }
+
+            &.cols3 {
+                width: 50%;
+            }
+        }
+    }
+
+    #pgCadastro {
+        padding-bottom: 0;
+
+        .marca {
+            margin: 40px auto -100px auto;
+
+            .mobile {
+                display: block;
+            }
+            .desktop {
+                display: none;
+            }
+        }
+
+        .perfil {
+            width: 100%;
+
+            > div {
+                padding: 110px 20px 50px 20px;
+            }
+        }
+
+        .registro {
+            width: 100%;
+
+            > div {
+                padding: 30px 50px;
+            }
+        }
+    }
+}
+
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
